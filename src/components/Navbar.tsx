@@ -63,7 +63,7 @@ export default function Navbar() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="fixed top-0 left-0 w-full bg-blue-700 dark:bg-blue-900 border-b border-blue-600 shadow-md z-50"
+      className="fixed top-0 left-0 w-full bg-blue-600 dark:bg-blue-900 border-b border-blue-600 shadow-md z-50"
     >
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo */}
@@ -72,7 +72,7 @@ export default function Navbar() {
         </h1>
 
         {/* 🖥️ Navegación Desktop */}
-        <div className="hidden md:flex items-center space-x-3 bg-blue-800/30 rounded-xl p-1">
+        <div className="hidden lg:flex items-center space-x-3 bg-blue-700/30 rounded-xl p-1">
           {navItems.map((item) => (
             <button
               key={item.id}
@@ -97,7 +97,7 @@ export default function Navbar() {
         {/* 📱 Botón menú móvil */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-white hover:text-gray-200 transition"
+          className="lg:hidden text-white hover:text-gray-200 transition"
         >
           {menuOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
@@ -111,7 +111,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-blue-700 dark:bg-blue-900 border-t border-blue-600 flex flex-col items-center py-4 space-y-3"
+            className="lg:hidden bg-blue-700 dark:bg-blue-900 border-t border-blue-600 flex flex-col items-center py-4 space-y-3"
           >
             {navItems.map((item) => (
               <button
