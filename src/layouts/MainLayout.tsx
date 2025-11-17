@@ -45,7 +45,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
   const [selectedPatch, setSelectedPatch] = useState<string>(latestPatch);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-blue-950 text-gray-900 dark:text-gray-100 transition-colors duration-300 relative">
+    <div className="min-h-screen bg-white dark:bg-blue-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 relative">
       <Navbar />
 
       <main className="pt-20">{children}</main>

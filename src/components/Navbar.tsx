@@ -63,7 +63,7 @@ export default function Navbar() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="fixed top-0 left-0 w-full bg-blue-600 dark:bg-blue-900 border-b border-blue-600 shadow-md z-50"
+      className="fixed top-0 left-0 w-full bg-blue-600 dark:bg-blue-900 border-b border-blue-900 z-50"
     >
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo */}
