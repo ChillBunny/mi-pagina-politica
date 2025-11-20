@@ -1,4 +1,3 @@
-// src/context/ThemeContext.tsx
 import { createContext, useContext, useEffect, useState } from 'react'
 
 type ThemeContextType = {
@@ -13,21 +12,25 @@ const ThemeContext = createContext<ThemeContextType>({
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [isDark, setIsDark] = useState<boolean>(() => {
-    // preferencia guardada o preferencia del sistema
     try {
       const saved = localStorage.getItem('theme')
-      if (saved) return saved === 'dark'
+      if (saved === 'dark') return true
+      if (saved === 'light') return false
     } catch {}
-    return window.matchMedia?.('(prefers-color-scheme: dark)')?.matches ?? false
+    // Default light <-- Aqui se cambia el tema de inicio.
+    return true
   })
 
+  // Sincroniza el DOM y localStorage
   useEffect(() => {
     if (isDark) {
       document.documentElement.classList.add('dark')
-      try { localStorage.setItem('theme', 'dark') } catch {}
+      document.documentElement.classList.remove('light')
+      localStorage.setItem('theme', 'dark')
     } else {
       document.documentElement.classList.remove('dark')
-      try { localStorage.setItem('theme', 'light') } catch {}
+      document.documentElement.classList.add('light')
+      localStorage.setItem('theme', 'light')
     }
   }, [isDark])
 

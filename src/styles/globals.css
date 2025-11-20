@@ -14,7 +14,7 @@
 
 @media (min-width: 768px) and (max-width: 900px) {
   .tablet-text-fix {
-    font-size: 4.9rem !important; /* similar a ~text-7xl */
+    font-size: 4.5rem !important; /* similar a ~text-7xl */
   }
 }
 

@@ -5,15 +5,24 @@ export default function Territory() {
   return (
     <section
       id="territory"
-      className="min-h-screen flex items-center justify-center bg-slate-200 dark:bg-slate-950
-"
+      className="
+        min-h-screen flex items-center justify-center
+        bg-slate-200 dark:bg-slate-950
+        px-5 sm:px-8 md:px-12
+      "
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true, amount: 0.3 }}
-        className="text-center max-w-3xl"
+        className="
+          text-center 
+          w-full 
+          max-w-3xl 
+          mx-auto 
+          px-4 sm:px-6 md:px-8
+        "
       >
         <h2 className="text-3xl font-bold mb-4 text-blue-700 dark:text-blue-400">
           Territorio – Circunscripción 2, Santiago
@@ -26,7 +35,6 @@ export default function Territory() {
           propuestas.
         </p>
 
-        {/* 🔷 Placeholder para una futura sección con mapa, zonas o tarjetas */}
         <div className="p-6 border border-blue-300/40 dark:border-blue-700/40 rounded-xl bg-white/60 dark:bg-gray-900/40 backdrop-blur-sm">
           <p className="text-gray-600 dark:text-gray-300 text-sm">
             Próximamente: mapa interactivo, listado de barrios, información

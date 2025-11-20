@@ -14,8 +14,8 @@ export default function Home() {
             <div
               className="rounded-full flex items-center justify-center overflow-visible relative"
               style={{
-                width: "260px",
-                height: "240px",
+                width: "300px",
+                height: "280px",
                 border: "28px solid #450a0a",
               }}
             >
@@ -23,7 +23,7 @@ export default function Home() {
                 src="/images/profile/profile_test.png"
                 alt="Foto Perfil"
                 className="rounded-full w-[300px] h-[300px] object-cover scale-[1.12] relative z-20"
-                style={{ marginTop: "-85px" }}
+                style={{ marginTop: "-50px" }}
               />
             </div>
           </div>
@@ -33,7 +33,7 @@ export default function Home() {
             className="font-bold 
             leading-[0.95] 
             text-center md:text-left 
-            text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem]
+            text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[10rem]
             tablet-text-fix"
           >
             DIPUTADO
@@ -47,7 +47,7 @@ export default function Home() {
             className="    font-bold 
             leading-[0.95] 
             text-center md:text-left 
-            text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem]
+            text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[10rem]
             tablet-text-fix"
           >
             REGIDOR
