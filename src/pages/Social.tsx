@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import memesImg from "../../public/images/social/Memes.png";
 import KickImg from "../../public/images/social/Kick.jpg";
 import WSImg from "../../public/images/social/Whatsapp.jpg";
-import YTImg from "../../public/images/social/Youtube.jpg";
+//import YTImg from "../../public/images/social/Youtube.jpg";
 import kkWiki from "../../public/images/social/kkWiki.jpg";
 //import mrRD from "../../public/images/social/mr.rd.jpg";
 
@@ -44,12 +44,6 @@ export default function Social() {
           img: KickImg,
           url: "https://kick.com/puntomedio",
         },
-        {
-          name: "YouTube",
-          text: "Resúmenes de los directos",
-          img: YTImg,
-          url: "https://www.youtube.com/@PuntoMedioRD",
-        },
       ],
     },
     {
@@ -61,25 +55,14 @@ export default function Social() {
           img: kkWiki,
           url: "https://www.facebook.com/share/g/193qzM78ai/",
         },
-        //{ name: "Instagram", text: "Grupo Secundario", img: mrRD, url: "#" },
-        //{ name: "TikTok", text: "Debates breves y análisis rápidos", img: emptyImg, url: "#" },
       ],
     },
-    /*
-    {
-      title: "PodCast",
-      cards: [
-        { name: "YouTube", text: "Episodios completos en video", img: emptyImg, url: "#" },
-        { name: "TikTok", text: "Cortos y Clips", img: emptyImg, url: "#" },
-      ],
-    },*/
   ];
 
   return (
     <section
       id="social"
-      className="min-h-screen py-24 bg-linear-to-br from-blue-600 via-indigo-600 to-purple-700
-"
+      className="min-h-screen py-24 bg-linear-to-br from-blue-600 via-indigo-600 to-purple-700"
     >
       <h2 className="text-5xl font-extrabold mb-12 text-center drop-shadow-md tracking-wide">
         Redes Sociales
@@ -97,67 +80,68 @@ export default function Social() {
           >
             <h3
               className="
-                  text-3xl font-semibold mb-10 text-blue-100 tracking-wide
-                  border border-white/30 bg-white/10 backdrop-blur-sm
-                  shadow-lg px-6 py-2 rounded-xl inline-block
-                  max-w-[90%] mx-auto
+                text-3xl font-semibold mb-10 text-blue-100 tracking-wide
+                border border-white/30 bg-white/10 backdrop-blur-sm
+                shadow-lg px-6 py-2 rounded-xl inline-block
+                max-w-[90%] mx-auto
               "
             >
               {section.title}
             </h3>
 
-            <div
-              className="
+            {/* Contenedor flexible para centrar el grid */}
+            <div className="flex justify-center">
+              <div
+                className="
                   grid 
-                  grid-cols-1 
-                  sm:grid-cols-2 
-                  lg:grid-cols-3 
-                  xl:grid-cols-4
-                  auto-rows-fr
-                  gap-10
+                  grid-cols-[repeat(auto-fit,minmax(280px,1fr))] 
+                  auto-rows-fr 
+                  gap-10 
                   justify-items-center
                   w-full
-                  "
-            >
-              {section.cards.map((card, index) => (
-                <motion.a
-                  key={index}
-                  href={card.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ y: -10, scale: 1.04 }}
-                  transition={{ type: "spring", stiffness: 140 }}
-                  className="
-                    w-72 h-[430px] rounded-2xl shadow-xl overflow-hidden 
-                    bg-white text-black flex flex-col hover:shadow-2xl cursor-pointer
-                  "
-                >
-                  <div className="relative w-full h-[260px] overflow-hidden">
-                    <img
-                      src={card.img}
-                      alt={card.name}
-                      className="absolute inset-0 w-full h-full object-cover"
-                    />
-                  </div>
-
-                  <div className="p-5 flex flex-col justify-between h-full">
-                    {/* TÍTULO CON COLOR DINÁMICO */}
-                    <p
-                      className={`text-2xl font-extrabold tracking-wide ${
-                        colorMap[card.name] || "text-blue-900"
-                      }`}
-                    >
-                      {card.name}
-                    </p>
-
-                    <p className="mt-2 text-lg text-gray-700">{card.text}</p>
-
-                    <div className="mt-4 font-semibold text-blue-700">
-                      Visitar →
+                  max-w-[1400px]
+                "
+              >
+                {section.cards.map((card, index) => (
+                  <motion.a
+                    key={index}
+                    href={card.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ y: -10, scale: 1.04 }}
+                    transition={{ type: "spring", stiffness: 140 }}
+                    className="
+                      w-72 h-[430px] rounded-2xl shadow-xl overflow-hidden 
+                      bg-white text-black flex flex-col hover:shadow-2xl cursor-pointer
+                    "
+                  >
+                    <div className="relative w-full h-[260px] overflow-hidden">
+                      <img
+                        src={card.img}
+                        alt={card.name}
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
                     </div>
-                  </div>
-                </motion.a>
-              ))}
+
+                    <div className="p-5 flex flex-col justify-between h-full">
+                      {/* TÍTULO CON COLOR DINÁMICO */}
+                      <p
+                        className={`text-2xl font-extrabold tracking-wide ${
+                          colorMap[card.name] || "text-blue-900"
+                        }`}
+                      >
+                        {card.name}
+                      </p>
+
+                      <p className="mt-2 text-lg text-gray-700">{card.text}</p>
+
+                      <div className="mt-4 font-semibold text-blue-700">
+                        Visitar →
+                      </div>
+                    </div>
+                  </motion.a>
+                ))}
+              </div>
             </div>
           </motion.div>
         ))}

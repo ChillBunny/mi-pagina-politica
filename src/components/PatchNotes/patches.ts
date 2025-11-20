@@ -1,4 +1,17 @@
 export const PATCHES: Record<string, { title: string; notes: string[] }> = {
+  "0.5.0": {
+    title: "Patch 0.5.0",
+    notes: [
+      "Se completó la sección *Donaciones* con soporte para múltiples métodos: PayPal, BHD y Popular.",
+      "Ahora la información bancaria se oculta por defecto y se puede revelar con un botón de ojo, garantizando privacidad inmediata.",
+      "Se añadió botón de copiar al portapapeles, que funciona correctamente en desktop y mobile, copiando solo el número de cuenta o email según corresponda.",
+      "Se ajustó la visualización para que BHD y Popular muestren explícitamente: 'Cuenta Corriente' o 'Cuenta de Ahorros', junto al número, mientras que PayPal muestra solo el email.",
+      "Se implementó lógica para que al cambiar de método, la información se oculte automáticamente, evitando revelaciones accidentales.",
+      "El layout del ToggleGroup y del contenedor de información fue simplificado y estilizado para mejorar la experiencia visual y consistencia con el resto del sitio.",
+      "Se mantuvo el id `donate` para que los enlaces del navbar sigan funcionando correctamente.",
+      "Commit orientado a mejorar la seguridad de la información, la UX y la consistencia de la sección de donaciones.",
+    ],
+  },
   "0.4.1": {
     title: "Patch 0.4.1",
     notes: [
