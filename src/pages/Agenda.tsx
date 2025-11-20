@@ -1,6 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
 
+//https://youtu.be/7P6aYbUo19U?si=vITozpQidy4LmW-u
+//https://youtu.be/7P6aYbUo19U?si=oMrsusP6P5i8sRt7
+
 export default function Agenda() {
   return (
     <section

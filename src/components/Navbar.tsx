@@ -2,18 +2,24 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-
 import ThemeToggle from "./ThemeToggle";
 import LangToggle from "./LangToggle";
 
-// ✅ Todas las secciones activas
-type SectionId = "home" | "agenda" | "doctrine" | "team" | "join" | "donate" | "social";
+// ✅ Secciones actualizadas (sin "team", con "territory")
+type SectionId =
+  | "home"
+  | "agenda"
+  | "doctrine"
+  | "territory"
+  | "join"
+  | "donate"
+  | "social";
 
 const navItems: { id: SectionId; label: string }[] = [
   { id: "home", label: "Inicio" },
   { id: "agenda", label: "Agenda" },
   { id: "doctrine", label: "Doctrina" },
-  { id: "team", label: "Equipo" },
+  { id: "territory", label: "Territorio" },
   { id: "join", label: "Únete" },
   { id: "donate", label: "Donar" },
   { id: "social", label: "Redes" },
@@ -23,7 +29,7 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState<SectionId>("home");
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // 🧭 Detección de la sección visible
+  // 🧭 Detección automática de sección visible
   useEffect(() => {
     const handleScroll = () => {
       const scrollPos = window.scrollY + window.innerHeight / 2;
@@ -47,12 +53,11 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // 🪶 Scroll suave al hacer click
+  // 🪶 Scroll suave
   const handleClick = (id: SectionId) => {
     const section = document.getElementById(id);
     if (section) {
-      const y =
-        section.getBoundingClientRect().top + window.scrollY - 80;
+      const y = section.getBoundingClientRect().top + window.scrollY - 80;
       window.scrollTo({ top: y, behavior: "smooth" });
       setMenuOpen(false);
     }
@@ -71,8 +76,8 @@ export default function Navbar() {
           Santiago Circ #2 🇩🇴
         </h1>
 
-        {/* 🖥️ Navegación Desktop */}
-        <div className="hidden lg:flex items-center space-x-3 bg-blue-700/30 rounded-xl p-1">
+        {/* 🖥️ Desktop */}
+        <div className="hidden lg:flex items-center space-x-1 bg-blue-700/30 rounded-xl p-2">
           {navItems.map((item) => (
             <button
               key={item.id}
@@ -87,14 +92,14 @@ export default function Navbar() {
             </button>
           ))}
 
-          {/* ⚙️ Controles de tema e idioma */}
+          {/* Controles */}
           <div className="flex items-center gap-3 pl-2 border-l border-blue-500/40 ml-2">
             <ThemeToggle />
             <LangToggle />
           </div>
         </div>
 
-        {/* 📱 Botón menú móvil */}
+        {/* 📱 Móvil */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="lg:hidden text-white hover:text-gray-200 transition"
@@ -103,7 +108,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* 📲 Menú Móvil */}
+      {/* 📲 Menú móvil */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -127,7 +132,6 @@ export default function Navbar() {
               </button>
             ))}
 
-            {/* ⚙️ Controles en menú móvil */}
             <div className="flex items-center justify-center gap-4 pt-2">
               <ThemeToggle />
               <LangToggle />

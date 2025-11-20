@@ -23,14 +23,14 @@ export default function Home() {
                 src="/images/profile_test.png"
                 alt="Foto Perfil"
                 className="rounded-full w-[300px] h-[300px] object-cover scale-[1.12] relative z-20"
-                style={{ marginTop: "-50px" }}
+                style={{ marginTop: "-85px" }}
               />
             </div>
           </div>
 
           {/* Texto DIPUTADO */}
           <h1
-            className="    font-bold 
+            className="font-bold 
             leading-[0.95] 
             text-center md:text-left 
             text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem]
@@ -58,16 +58,16 @@ export default function Home() {
             <div
               className="rounded-full flex items-center justify-center overflow-visible relative"
               style={{
-                width: "260px",
-                height: "240px",
+                width: "300px",
+                height: "280px",
                 border: "28px solid var(--color-bandera-rojo)",
               }}
             >
               <img
-                src="/images/profile_test_01.png"
+                src="/images/diego_test_01.png"
                 alt="Foto Perfil"
-                className="rounded-full w-[300px] h-[300px] object-cover scale-[1.12] relative z-20"
-                style={{ marginTop: "-85px" }}
+                className="rounded-full w-[310px] h-[310px] object-cover scale-[1.45] relative z-20"
+                style={{ marginTop: "-170px" }}
               />
             </div>
           </div>
