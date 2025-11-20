@@ -5,7 +5,8 @@ export default function Territory() {
   return (
     <section
       id="territory"
-      className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-950 px-6"
+      className="min-h-screen flex items-center justify-center bg-slate-200 dark:bg-slate-950
+"
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -20,8 +21,9 @@ export default function Territory() {
 
         <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
           Representamos los diferentes sectores, comunidades y barrios que
-          conforman nuestra circunscripción. Este espacio ofrece una visión clara
-          del territorio donde trabajamos y desarrollamos nuestras propuestas.
+          conforman nuestra circunscripción. Este espacio ofrece una visión
+          clara del territorio donde trabajamos y desarrollamos nuestras
+          propuestas.
         </p>
 
         {/* 🔷 Placeholder para una futura sección con mapa, zonas o tarjetas */}

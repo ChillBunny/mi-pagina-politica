@@ -16,11 +16,11 @@ export default function Home() {
               style={{
                 width: "260px",
                 height: "240px",
-                border: "28px solid var(--color-bandera-rojo)",
+                border: "28px solid #450a0a",
               }}
             >
               <img
-                src="/images/profile_test.png"
+                src="/images/profile/profile_test.png"
                 alt="Foto Perfil"
                 className="rounded-full w-[300px] h-[300px] object-cover scale-[1.12] relative z-20"
                 style={{ marginTop: "-85px" }}
@@ -60,11 +60,11 @@ export default function Home() {
               style={{
                 width: "300px",
                 height: "280px",
-                border: "28px solid var(--color-bandera-rojo)",
+                border: "28px solid #450a0a",
               }}
             >
               <img
-                src="/images/diego_test_01.png"
+                src="/images/profile/diego_test_02.png"
                 alt="Foto Perfil"
                 className="rounded-full w-[310px] h-[310px] object-cover scale-[1.45] relative z-20"
                 style={{ marginTop: "-170px" }}

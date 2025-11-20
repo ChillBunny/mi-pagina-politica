@@ -1,4 +1,16 @@
 export const PATCHES: Record<string, { title: string; notes: string[] }> = {
+  "0.4.0": {
+  title: "Patch 0.4.0",
+  notes: [
+    "Se rediseñó por completo la sección *Social*, incluyendo tarjetas con imágenes, colores dinámicos por red social y animaciones con Framer Motion.",
+    "Se añadieron estilos responsivos mejorados para evitar problemas en tablets y laptops, especialmente en la cuadrícula de tarjetas.",
+    "Los subtítulos de cada sección ahora cuentan con bordes, transparencia, blur y un diseño más consistente con el estilo general.",
+    "Se ajustaron los colores globales de varias secciones (Agenda, Doctrine, Territory, Social) para lograr coherencia cromática en todo el sitio.",
+    "Se implementaron nuevos colores personalizados en tonos azul marino, ámbar y rojo oscuro para modo claro y oscuro.",
+    "Mejora general del layout, corrigiendo comportamientos en pantallas pequeñas (320px) y reorganizando breakpoints.",
+    "La sección Social ahora utiliza imágenes importadas desde Vite con compatibilidad total.",
+  ],
+},
   "0.3.0": {
     title: "Patch 0.3.0",
     notes: [

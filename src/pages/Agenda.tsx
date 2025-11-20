@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-
 //https://youtu.be/7P6aYbUo19U?si=vITozpQidy4LmW-u
 //https://youtu.be/7P6aYbUo19U?si=oMrsusP6P5i8sRt7
 
@@ -8,7 +7,8 @@ export default function Agenda() {
   return (
     <section
       id="agenda"
-      className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900"
+      className="min-h-screen flex items-center justify-center bg-blue-50 dark:bg-blue-950
+"
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -21,7 +21,8 @@ export default function Agenda() {
           Agenda
         </h2>
         <p className="text-lg text-gray-700 dark:text-gray-300">
-          Conoce nuestras propuestas y planes para transformar el futuro del país.
+          Conoce nuestras propuestas y planes para transformar el futuro del
+          país.
         </p>
       </motion.div>
     </section>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap");
 
 .scale-wrapper {
   transform: scale(1.5);
@@ -18,18 +18,16 @@
   }
 }
 
-
-
 /* ============================= */
 /* 🎨 VARIABLES */
 :root {
-  --color-bandera-azul: #4273B8;
-  --color-bandera-rojo: #CE1126;
-  --color-bandera-blanco: #FFFFFF;
+  --color-bandera-azul: #4273b8;
+  --color-bandera-rojo: #ce1126;
+  --color-bandera-blanco: #ffffff;
   --ring-size: 200px; /* ← Controla qué tan grueso es el anillo */
-  --color-gris-oscuro: #1E1E1E;
-  --color-gris-medio: #9CA3AF;
-  --color-gris-claro: #F3F4F6;
+  --color-gris-oscuro: #1e1e1e;
+  --color-gris-medio: #9ca3af;
+  --color-gris-claro: #f3f4f6;
 
   --font-sans: "Inter", system-ui, sans-serif;
   --font-heading: "Poppins", sans-serif;
@@ -39,10 +37,10 @@
   --text: #0f172a;
   --text-muted: #475569;
   --card: #ffffff;
-  --glass: rgba(255,255,255,0.06);
+  --glass: rgba(255, 255, 255, 0.06);
 
   /* 🇩🇴 Gradiente institucional */
-  --gradient-bandera: linear-gradient(to bottom right, #4273B8, #CE1126);
+  --gradient-bandera: linear-gradient(to bottom right, #4273b8, #ce1126);
 }
 
 .dark {
@@ -51,7 +49,7 @@
   --text: #e6eef8;
   --text-muted: #94a3b8;
   --card: #071026;
-  --glass: rgba(255,255,255,0.03);
+  --glass: rgba(255, 255, 255, 0.03);
 }
 
 /* ============================= */
@@ -67,7 +65,10 @@ html {
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-heading);
   color: var(--text);
 }
@@ -85,13 +86,17 @@ h1, h2, h3, h4 {
 .card {
   background: var(--card);
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(11,17,35,0.06);
+  box-shadow: 0 6px 18px rgba(11, 17, 35, 0.06);
   padding: 1rem;
 }
 
 .divider {
   height: 1px;
-  background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(0,0,0,0.04));
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(0, 0, 0, 0.04)
+  );
 }
 
 /* ============================= */
